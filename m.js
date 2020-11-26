@@ -24,8 +24,8 @@ for(i = 0; i < jogadores.length; i++) {
         document.write('Gols da ' + (x + 1) + ' partida: ' + gol + '<br>');
         somadosgols = somadosgols + gol
     }
+    
     document.write('<br>')
     document.write('A média de gols é: ' + (somadosgols / jogador.gol.length).toFixed(1) + '<br>');
     document.write('<hr>');
-
 }
