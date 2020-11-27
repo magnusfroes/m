@@ -15,6 +15,7 @@ for(i = 0; i < 3; i++) {
     jogadores.push(jogador)
 }
 
+topjogador = []
 for(i = 0; i < jogadores.length; i++) {
     jogador = jogadores[i]
     document.write('O jogador ' + jogador.nome + ' teve: <br><br>');
@@ -22,10 +23,17 @@ for(i = 0; i < jogadores.length; i++) {
     for(x = 0; x < jogador.gol.length; x++) {
         gol = jogador.gol[x]
         document.write('Gols da ' + (x + 1) + ' partida: ' + gol + '<br>');
-        somadosgols = somadosgols + gol
+        somadosgols = somadosgols + gol 
     }
-    
+
+    media = somadosgols / jogador.gol.length
+
+    resultado = []
+    resultado.jogador = jogador
+    resultado.soma = media
+    topjogador.push(resultado)
+
     document.write('<br>')
-    document.write('A média de gols é: ' + (somadosgols / jogador.gol.length).toFixed(1) + '<br>');
+    document.write('A média de gols é: ' + (media).toFixed(1) + '<br>');
     document.write('<hr>');
 }
