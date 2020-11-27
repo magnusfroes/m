@@ -9,7 +9,7 @@ for(i = 0; i < 3; i++) {
         gols.push(gol)
     }
 
-    jogador = []
+    jogador = {}
     jogador.nome = nome
     jogador.gol = gols
     jogadores.push(jogador)
